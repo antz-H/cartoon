@@ -1,27 +1,13 @@
 ---
 name: remove-image-watermark
-description: Removes watermarks or unwanted overlays from images by masking a user-specified region and saving a cleaned copy as a new file. Use when the user mentions 去水印, 消除水印, remove watermark, image cleanup, or wants single-image or batch image watermark removal.
+description: Removes watermarks or small overlays by masking a user-specified rectangular region; supports single file or batch folder; writes a new `_clean` sibling file without overwriting the source. Use when the user mentions 去水印, 消除水印, remove watermark, logo removal, image cleanup, or batch processing.
 ---
 
 # Remove Image Watermark
 
 ## Purpose
 
-This skill removes a watermark or small unwanted overlay from an image.
-
-Default behavior:
-
-- works on a user-specified rectangular region
-- supports both single-image and batch processing
-- writes a new output file instead of overwriting the source
-
-## When To Use
-
-Use this skill when the user:
-
-- asks to remove a watermark from an image
-- asks to clean up a corner mark, logo, or overlay
-- asks for image cleanup on one image or many images
+Mask-based cleanup on a tight `x,y,w,h` region; single image or `--input-dir` batch; output is always a new file (default suffix `_clean`).
 
 ## Inputs To Gather
 

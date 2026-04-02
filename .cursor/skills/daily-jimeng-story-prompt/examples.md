@@ -1,6 +1,6 @@
 # daily-jimeng-story-prompt · 示例
 
-下列示例演示：今日情节三块、留白文案、以及按 `reference/Prompt-template.md` 拼出的「完整即梦 Prompt」。  
+下列示例演示：今日情节三块、留白文案、以及按本 skill 内 `reference/Prompt-template.md`（路径规则见 [reference.md](reference.md)）拼出的「完整即梦 Prompt」。  
 角色段、画风段、留白版式、质量词与模板原文一致；仅「本页情节」随天更换。
 
 ---
