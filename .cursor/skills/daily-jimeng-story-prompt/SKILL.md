@@ -1,13 +1,13 @@
 ---
 name: daily-jimeng-story-prompt
-description: Builds daily 即梦/JiMeng image prompts for the fixed-character ink picture-book series 墨团与芽仔, writes `作品/{序号} {标题}.md`, and enforces topic constraints (微小但重要、共鸣优先忌任务感、非鸡汤留白). Bottom captions default to **留白对白模式**: two lines, each `芽仔说:“…”` / `墨团说:“…”` with Chinese curly quotes for typesetting (hooks: 急×停、问×极简答、改框等—see reference.md). Use when the user runs /daily-jimeng-story-prompt, asks to continue the story arc, generate today's page prompt, 续写绘本一页, or assemble prompts from the arc file and template.
+description: Builds daily 即梦/JiMeng image prompts for the fixed-character ink picture-book series 墨团与芽仔, writes `作品/{序号} {标题}.md`, and enforces topic constraints (微小但重要、共鸣优先忌任务感、非鸡汤留白). Bottom captions default to **留白对白模式**: two lines, each `芽仔说:“…”` / `墨团说:“…”` with Chinese curly quotes for typesetting (hooks: 急×停、问×极简答、改框等—see reference.md). Each run also outputs a **小红书 · 对白释义** short note explaining the two bottom lines in plain language (see reference.md). Use when the user runs /daily-jimeng-story-prompt, asks to continue the story arc, generate today's page prompt, 续写绘本一页, or assemble prompts from the arc file and template.
 ---
 
 # Daily JiMeng Story Prompt
 
 ## Purpose
 
-Fixed-character daily page workflow: read continuity → draft one drawable beat → fill the prompt template → optional bottom caption → save under `作品/`.
+Fixed-character daily page workflow: read continuity → draft one drawable beat → fill the prompt template → optional bottom caption → **小红书对白释义**（发笔记用）→ save under `作品/`。
 
 Does **not** cover 选图、去水印、后期修图 unless the user asks separately.
 
@@ -30,15 +30,16 @@ Does **not** cover 选图、去水印、后期修图 unless the user asks separa
 2. **写今日一拍**：先过 reference **「共鸣优先 · 忌任务感」** 快检，再落笔。须符合 **选题约束**，但**禁止**为凑「微小」「克制」而硬拗停步、对称构图或金句式深意。单场景、可画；`主题` / `深意` 可省略或极短——若写出来像教案小结则删掉，只保留 **本页情节**（**本页情节**直接用于拼装）。忌与上一页同动作、同机位、同套话（见 reference **禁止套层推进**）。
 3. **拼完整正向 prompt**：按模板五段顺序；留白段与模板一致，勿自改结构。
 4. **留白文案**：若留白段供后期配文，**默认**按 reference **留白对白模式** 写 **两行对白**，每行 **`芽仔说：“……。”`** 或 **`墨团说：“……。”`**（中文弯引号包裹台词，纸书对话排版）；无对话口时再用 **留白规则** 内的观察句/白描两行。勿让模型在 **主画面** 内渲染文字；引号对白仅供 **后期排入底部留白**。
-5. **写入 `作品/{两位序号} {标题}.md`**：与弧文件序号、标题对齐；节名顺序固定：
+5. **小红书 · 对白释义**：在留白对白定稿后，按 [reference.md](reference.md)「**小红书 · 对话短句释义**」写 **一段** 可直接贴进小红书正文的说明文（帮助读者看懂「这句在画面上指什么、潜台词是什么」）。**禁**鸡汤扩写与教案感；**勿**当作第二套旁白重复整张画。若当页留白退避为无对白体的两行白描，本段改为解释 **那两行** 与画面的关系。
+6. **写入 `作品/{两位序号} {标题}.md`**：与弧文件序号、标题对齐；节名顺序固定：
 
-   `[角色固定段]` → `[画风段]` → `[留白指令段]`（含后期排版说明）→ `[本页情节]`（以 `竖版内页。` 起）→ `[质量词：高清、宣纸质感]` → **`[即梦钉尾 · 正向全文最末粘贴]`**
+   `[角色固定段]` → `[画风段]` → `[留白指令段]`（含后期排版说明）→ `[本页情节]`（以 `竖版内页。` 起）→ `[质量词：高清、宣纸质感]` → **`[即梦钉尾 · 正向全文最末粘贴]`** → **`[小红书 · 对白释义]`**（发笔记附录；**勿**拼进即梦正向 prompt）
 
    **钉尾**：按 `即梦绘本Prompt总结.md` §4.4——底部留白页用「底部五分之一干净纸带」句；**仅顶部留白**页改用「顶部约百分之十五干净留白带」句（勿对无底部条的页面误钉底）。
 
    只写当页文件，勿覆盖无关页。
 
-6. **聊天回复**：连续性说明 2～4 行 + 默认完整输出结构见 [reference.md](reference.md)「默认输出结构」；注明 **已写入** 路径。
+7. **聊天回复**：连续性说明 2～4 行 + 默认完整输出结构见 [reference.md](reference.md)「默认输出结构」（须含 **小红书 · 对白释义**）；注明 **已写入** 路径。
 
 ## Examples
 
@@ -53,3 +54,4 @@ Does **not** cover 选图、去水印、后期修图 unless the user asks separa
 - [ ] 本页一件小事、可画，且带 **体感或具体破绽**（非空泛「安静克制」）
 - [ ] 拼装顺序与模板一致
 - [ ] 作品 md **核心五段**齐全，且已附 **即梦钉尾**（见 `即梦绘本Prompt总结.md` §4.4）
+- [ ] 聊天与 `作品/*.md` 均已写 **小红书 · 对白释义**（见 reference「小红书 · 对话短句释义」；该节不进入即梦 prompt）

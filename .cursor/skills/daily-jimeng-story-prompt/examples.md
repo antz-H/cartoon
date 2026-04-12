@@ -1,6 +1,6 @@
 # daily-jimeng-story-prompt · 示例
 
-下列示例演示：今日情节三块、留白文案、以及按本 skill 内 `reference/Prompt-template.md`（路径规则见 [reference.md](reference.md)）拼出的「完整即梦 Prompt」。  
+下列示例演示：今日情节三块、留白文案、以及按本 skill 内 `reference/Prompt-template.md`（路径规则见 [reference.md](reference.md)）拼出的「完整即梦 Prompt」。正式跑 `/daily-jimeng-story-prompt` 时还应输出 **小红书 · 对白释义** 与写入 `作品/*.md` 的 `[小红书 · 对白释义]` 节（见 [reference.md](reference.md)「小红书 · 对话短句释义」），下文化略。  
 角色段、画风段、留白版式、质量词与模板原文一致；仅「本页情节」随天更换。
 
 **注意**：示例偏「示范结构」；日常生成请同时遵守 [reference.md](reference.md) **共鸣优先 · 忌任务感**——避免连续多页只换动词、不换体感与具体锚点。底部短句以 **留白对白模式** 为默认时，须写成两行 **`芽仔说：“……。”` / `墨团说：“……。”`**（弯引号）；下文示例若未带引号，仅保留情节语义，正式写入 `作品/*.md` 时应改为引号对白体。
