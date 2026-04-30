@@ -46,7 +46,7 @@ when_to_use: /jimeng-motuan-xhs-daily, 每日即梦小红书稿, 墨团与芽仔
   1. `## 主题与选型理由`：至少覆盖 ①承接上拍/未决 ②相对近页改了哪项 ③与 memory 对齐或张力 ④为何可画 ⑤墨团/芽仔动机各一句
   2. `## 小红书主标题`：一行 3～10 字
   3. `## 即梦正向 Prompt`：完整 prompt（代码围栏包裹，含钉尾）
-- **可选**追加：留白对白、对白释义、发布包装——遵守 [xhs-and-tone.md](references/xhs-and-tone.md)
+- **可选**追加：留白对白、对白释义、发布包装——遵守 [xhs-and-tone.md](references/xhs-and-tone.md)；留白对白默认使用**方言**（不限地域，有特色即可），规则见 [xhs-and-tone.md](references/xhs-and-tone.md)「对白方言」一节
 - 聊天中给出**可复制完整 prompt**，标注「以下为即梦粘贴区」，写明已落盘路径
 
 ### 4. 询问（评分 + memory）
